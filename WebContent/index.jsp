@@ -17,5 +17,10 @@
 	<a href="${pageContext.request.contextPath }/session/session_set.jsp">javabean绑定到session中</a><br>
 	<a href="${pageContext.request.contextPath }/session/session_rem.jsp">javabean从session中解绑</a><br>
 	<a href="${pageContext.request.contextPath }/session/session_getbean.jsp">获取Javabean的名称（活化）</a><br>
+	<hr>
+	
+	<a href="${pageContext.request.contextPath }/demo1">filter入门</a><br>
+	<a href="${pageContext.request.contextPath }/demo2">filter生命周期</a><br>
+	<a href="${pageContext.request.contextPath }/a/b/demo3">filterchain执行顺序</a><br>
 </body>
 </html>
