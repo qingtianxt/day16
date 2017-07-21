@@ -26,24 +26,40 @@
     <filter-name>LifeFilter</filter-name>
     <url-pattern>/demo2</url-pattern>
   </filter-mapping>
-   
-   <filter>
-  	<filter-name>BFilter</filter-name>
-  	<filter-class>b_filter.f_chain.BFilter</filter-class>
+  <filter>
+    <filter-name>BFilter</filter-name>
+    <filter-class>b_filter.f_chain.BFilter</filter-class>
   </filter>
   <filter-mapping>
-  	<filter-name>BFilter</filter-name>
-  	<url-pattern>/a/*</url-pattern>
+    <filter-name>BFilter</filter-name>
+    <url-pattern>/a/*</url-pattern>
   </filter-mapping>
   <filter>
-  	<filter-name>AFilter</filter-name>
-  	<filter-class>b_filter.f_chain.AFilter</filter-class>
+    <filter-name>AFilter</filter-name>
+    <filter-class>b_filter.f_chain.AFilter</filter-class>
   </filter>
   <filter-mapping>
-  	<filter-name>AFilter</filter-name>
-  	<url-pattern>/a/b/*</url-pattern>
+    <filter-name>AFilter</filter-name>
+    <url-pattern>/a/b/*</url-pattern>
   </filter-mapping>
- 
+  <filter>
+    <filter-name>Name4servletFilter</filter-name>
+    <filter-class>b_filter.g_servletname.Name4servletFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Name4servletFilter</filter-name>
+    <servlet-name>Demo11Servlet</servlet-name>
+  </filter-mapping>
+  <filter>
+  	<filter-name>DispatcherFilter</filter-name>
+  	<filter-class>b_filter.h_dispather.DispatcherFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>DispatcherFilter</filter-name>
+  	<url-pattern>/e/*</url-pattern>
+  	<dispatcher>FORWARD</dispatcher>
+  	<dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
   <servlet>
     <description></description>
     <display-name>Demo2Servlet</display-name>
@@ -64,4 +80,42 @@
     <servlet-name>Demo3Servlet</servlet-name>
     <url-pattern>/a/b/demo3</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Demo11Servlet</display-name>
+    <servlet-name>Demo11Servlet</servlet-name>
+    <servlet-class>b_filter.g_servletname.Demo11Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Demo11Servlet</servlet-name>
+    <url-pattern>/demo11</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Dem20Servlet</display-name>
+    <servlet-name>Dem20Servlet</servlet-name>
+    <servlet-class>b_filter.h_dispather.Dem20Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dem20Servlet</servlet-name>
+    <url-pattern>/e/demo20</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Demo30Servlet</display-name>
+    <servlet-name>Demo30Servlet</servlet-name>
+    <servlet-class>b_filter.h_dispather.Demo30Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Demo30Servlet</servlet-name>
+    <url-pattern>/e/demo30</url-pattern>
+  </servlet-mapping>
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/404.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/500.jsp</location>
+  </error-page>
 </web-app>

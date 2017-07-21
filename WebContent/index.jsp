@@ -22,5 +22,6 @@
 	<a href="${pageContext.request.contextPath }/demo1">filter入门</a><br>
 	<a href="${pageContext.request.contextPath }/demo2">filter生命周期</a><br>
 	<a href="${pageContext.request.contextPath }/a/b/demo3">filterchain执行顺序</a><br>
+	<a href="${pageContext.request.contextPath }/e/demo20">dispatcher使用</a><br>
 </body>
 </html>
